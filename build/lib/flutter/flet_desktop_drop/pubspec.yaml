@@ -1,0 +1,19 @@
+name: flet_desktop_drop
+description: Desktop drop control for Flet - drag and drop files from desktop
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flet: ^0.80.1
+  flutter:
+    sdk: flutter
+  desktop_drop: ^0.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0

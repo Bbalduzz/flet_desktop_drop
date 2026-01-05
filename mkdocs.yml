@@ -1,0 +1,7 @@
+site_name: FletDropzoneV2
+
+theme:
+  name: "material"
+
+plugins:
+  - mkdocstrings
