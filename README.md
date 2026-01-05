@@ -25,4 +25,4 @@ flet build macos -v
 
 ## Documentation
 
-[Link to documentation](https://Bbalduzz.github.io/flet-desktop-drop/)
+[Link to documentation](https://bbalduzz.github.io/flet_desktop_drop/)
