@@ -1,0 +1,14 @@
+site_name: flet-desktop-drop
+site_description: Desktop drop control for Flet
+
+theme:
+  name: material
+  palette:
+    primary: blue
+
+nav:
+  - Home: index.md
+  - API Reference: api.md
+
+plugins:
+  - search
