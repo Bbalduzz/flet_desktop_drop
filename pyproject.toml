@@ -14,16 +14,12 @@ dependencies = [
 [dependency-groups]
 dev = [
     "flet[all]>=0.80.1",
-    "mkdocs", 
-    "mkdocs-material",
-    "mkdocstrings[python]"
 ]
 
 [project.urls]
-Homepage = "https://mydomain.dev"
-Documentation = "https://github.com/MyGithubAccount/flet-desktop-drop"
-Repository = "https://github.com/MyGithubAccount/flet-desktop-drop"
-Issues = "https://github.com/MyGithubAccount/flet-desktop-drop/issues"
+Documentation = "https://github.com/Bbalduzz/flet-desktop-drop"
+Repository = "https://github.com/Bbalduzz/flet-desktop-drop"
+Issues = "https://github.com/Bbalduzz/flet-desktop-drop/issues"
 
 [tool.setuptools.package-data]
 "flutter.flet_desktop_drop" = ["**/*"]

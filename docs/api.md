@@ -2,52 +2,47 @@
 
 ## Dropzone
 
-::: src.flet_desktop_drop.flet_desktop_drop.Dropzone
+A control that accepts file drops from the desktop.
+
+```python
+from flet_desktop_drop import Dropzone
+```
+
+### Properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `content` | `Optional[ft.Control]` | The child control to display inside the dropzone |
+| `allowed_file_types` | `List[str]` | List of allowed extensions (e.g., `["pdf", "jpg"]`). Empty = all allowed |
+
+### Events
+
+| Event | Type | Description |
+|-------|------|-------------|
+| `on_dropped` | `Callable[[DroppedFilesEvent], Any]` | Fired when files are dropped |
+| `on_entered` | `ControlEventHandler` | Fired when drag enters the dropzone |
+| `on_exited` | `ControlEventHandler` | Fired when drag exits the dropzone |
+
+---
 
 ## DroppedFilesEvent
 
-::: src.flet_desktop_drop.flet_desktop_drop.DroppedFilesEvent
+Event fired when files are dropped onto the Dropzone.
 
-## Properties
+```python
+from flet_desktop_drop import DroppedFilesEvent
+```
 
-### content
+### Properties
 
-`Optional[ft.Control]`
+| Property | Type | Description |
+|----------|------|-------------|
+| `files` | `List[str]` | List of accepted file paths |
+| `rejected_files` | `List[str]` | List of rejected file paths (wrong extension) |
 
-The child control to display inside the dropzone. This is typically a `Container` with visual styling to indicate the drop area.
+---
 
-### allowed_file_types
-
-`List[str]`
-
-List of allowed file extensions (without the dot). For example: `["pdf", "jpg", "png"]`.
-
-If empty (default), all file types are accepted.
-
-## Events
-
-### on_dropped
-
-`Callable[[DroppedFilesEvent], Any] | None`
-
-Fired when files are dropped onto the dropzone. The event handler receives a `DroppedFilesEvent` with:
-
-- `files`: List of accepted file paths (matching the `allowed_file_types` filter)
-- `rejected_files`: List of rejected file paths (not matching the filter)
-
-### on_entered
-
-`Optional[ft.ControlEventHandler["Dropzone"]]`
-
-Fired when a drag operation enters the dropzone area. Use this to provide visual feedback.
-
-### on_exited
-
-`Optional[ft.ControlEventHandler["Dropzone"]]`
-
-Fired when a drag operation exits the dropzone area. Use this to reset visual feedback.
-
-## Example with Visual Feedback
+## Example
 
 ```python
 import flet as ft
@@ -67,20 +62,16 @@ def main(page: ft.Page):
 
     def on_dropped(e: DroppedFilesEvent):
         container.bgcolor = ft.Colors.BLUE_GREY_100
-        container.border = ft.border.all(2, ft.Colors.BLUE_GREY_300)
-
         if e.files:
             container.content = ft.Text(f"Received {len(e.files)} file(s)")
         page.update()
 
     def on_entered(e):
         container.bgcolor = ft.Colors.BLUE_100
-        container.border = ft.border.all(2, ft.Colors.BLUE_400)
         page.update()
 
     def on_exited(e):
         container.bgcolor = ft.Colors.BLUE_GREY_100
-        container.border = ft.border.all(2, ft.Colors.BLUE_GREY_300)
         page.update()
 
     dropzone = Dropzone(
