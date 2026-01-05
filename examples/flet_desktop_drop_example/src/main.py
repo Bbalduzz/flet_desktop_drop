@@ -170,7 +170,7 @@ def main(page: ft.Page):
         on_dropped=on_dropped,
         on_entered=on_entered,
         on_exited=on_exited,
-        allowed_file_types=["pdf"],
+        # allowed_file_types=["pdf"],
     )
 
     page.add(

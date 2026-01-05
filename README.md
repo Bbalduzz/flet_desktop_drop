@@ -1,5 +1,7 @@
 # flet-desktop-drop
-Desktop drop control for Flet
+Desktop drop control for Flet v1 (0.80.0 or later)
+
+<img width="1736" height="1336" alt="demo" src="demo.png" />
 
 ## Installation
 
@@ -11,27 +13,16 @@ Link to git repository:
 
 ```
 dependencies = [
-  "flet-desktop-drop @ git+https://github.com/MyGithubAccount/flet-desktop-drop",
+  "flet-desktop-drop @ git+https://github.com/Bbalduzz/flet-desktop-drop",
   "flet>=0.80.1",
 ]
 ```
 
-* **uv/pip dependency**
-
-If the package is published on pypi.org:
-
-```
-dependencies = [
-  "flet-desktop-drop",
-  "flet>=0.80.1",
-]
-```
-
-Build your app:
+Build your app on your machine:
 ```
 flet build macos -v
 ```
 
 ## Documentation
 
-[Link to documentation](https://MyGithubAccount.github.io/flet-desktop-drop/)
+[Link to documentation](https://Bbalduzz.github.io/flet-desktop-drop/)
